@@ -16,19 +16,16 @@
     --sage-line:  #c9d5cd;
     --gold:       #c68a45;
     --line:       #ddd8ca;
-    --accent: #12804a;
-    --accent-soft: #e7f2ec;
-    --accent-line: #bddccb;
     --shadow:     0 1px 2px rgba(28, 33, 31, 0.04), 0 8px 24px -12px rgba(28, 33, 31, 0.18);
   
-    --serif: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --sans:  "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --serif: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --sans:  "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --mono:  "DM Mono", "SFMono-Regular", Menlo, Consolas, monospace;
   
     /* Widened slightly (e.g. from 860px / 1120px up to 1000px / 1200px) */
-    --max: 1360px;
-    --max-nav: 1360px;
-    --gutter: clamp(20px, 4.5vw, 64px);
+    --max: 1320px;
+    --max-nav: 1320px;
+    --gutter: clamp(20px, 4vw, 56px);
   }
   
   * { box-sizing: border-box; }
@@ -248,7 +245,7 @@
     font-family: var(--serif);
     font-size: clamp(16px, 1.6vw, 19px);
     color: var(--ink-soft);
-    max-width: 62ch;
+    max-width: 80ch;
     margin: 0 0 8px;
   }
   
@@ -311,7 +308,7 @@
   .hero p.hero__desc {
     font-size: 17px;
     color: var(--ink-soft);
-    max-width: 56ch;
+    max-width: 64ch;
     margin: 0 0 30px;
   }
   
@@ -559,7 +556,7 @@
   .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    gap: 24px;
   }
   
   @media (max-width: 780px) {
@@ -570,7 +567,7 @@
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 12px;
-    padding: 22px 24px;
+    padding: 28px 30px;
     box-shadow: var(--shadow);
   }
   
@@ -746,7 +743,7 @@
 /* ==========================================================================
    Asteria Labs additions
    ========================================================================== */
-.hero h1.hero__slogan { font-size: clamp(36px, 5.6vw, 62px); line-height: 1.06; max-width: 14ch; }
+.hero h1.hero__slogan { font-size: clamp(36px, 5.6vw, 68px); line-height: 1.06; max-width: 18ch; }
 .hero__photo--star { background: var(--sage-deep); }
 .hero__photo--star svg { width: 100%; height: 100%; display: block; }
 
@@ -806,175 +803,22 @@
 #constellation { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
 main, footer.contact { position: relative; z-index: 1; }
 
-/* ==========================================================================
-   Hub-style refresh
-   Condensed uppercase headings, mono tags, accent-topped cards, wider layout,
-   and staggered entrance animations.
-   ========================================================================== */
-
-body { font-size: 17px; }
-.lede { font-family: var(--sans); max-width: 80ch; font-size: clamp(16px, 1.5vw, 19px); }
-.hero p.hero__desc { max-width: 66ch; }
-
-/* vertical room: sections breathe more */
-section { padding: clamp(64px, 10vw, 120px) 0; }
-.hero { padding-top: clamp(64px, 11vw, 120px); }
-
-/* ---- headings ---- */
-.hero h1.hero__slogan {
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: clamp(48px, 8.2vw, 112px);
-  line-height: 0.94;
-  letter-spacing: 0;
-  max-width: none;
-  margin-bottom: 22px;
-}
-.accent { color: var(--accent); }
-
-.hero__eyebrow { letter-spacing: 0.32em; color: var(--accent); }
-.hero__eyebrow::before { background: var(--accent); }
-.hero__role { letter-spacing: 0.04em; }
-
-.section-title {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: clamp(34px, 4.6vw, 56px);
-  line-height: 1;
-  letter-spacing: 0.01em;
-}
-.section-tag { color: var(--accent); letter-spacing: 0.3em; }
-.contact .section-tag { color: var(--gold); }
-
-/* dashed, edge-fading rule */
-.section-rule {
-  height: 1px;
-  background: none;
-  border-top: 2px dashed var(--accent-line);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
-}
-.contact .section-rule { background: none; border-top-color: rgba(246,244,238,0.3); }
-
-/* ---- buttons ---- */
-.btn { text-transform: uppercase; letter-spacing: 0.14em; font-size: 12.5px; padding: 14px 24px; border-radius: 10px; }
-
-/* ---- cards ---- */
-.card-grid { gap: 28px; }
-.card-grid--3 { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 1000px) { .card-grid--3 { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 680px)  { .card-grid--3 { grid-template-columns: 1fr; } }
-
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-top: 4px solid var(--accent);
-  border-radius: 18px;
-  padding: 34px 36px 30px;
-  min-height: 330px;
-  box-shadow: var(--shadow);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 2px 4px rgba(28,33,31,0.05), 0 22px 40px -18px rgba(18,128,74,0.35);
-}
-
-.card__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 28px;
-}
-.card__tile {
-  width: 56px; height: 56px;
-  display: grid; place-items: center;
-  border-radius: 14px;
-  background: var(--accent-soft);
-  border: 1px solid var(--accent-line);
-  color: var(--accent);
-}
-.card__tile svg { width: 26px; height: 26px; }
-
-.tag {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border: 1px solid var(--accent-line);
-  border-radius: 999px;
-  padding: 6px 14px;
-  white-space: nowrap;
-}
-
-.card h3 {
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: clamp(26px, 2.3vw, 32px);
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-  line-height: 1.05;
-  margin: 0 0 12px;
-}
-.card p { font-size: 15.5px; line-height: 1.6; }
-
-.card__link {
-  margin-top: auto;
-  padding-top: 24px;
-  font-family: var(--mono);
-  font-size: 12.5px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--accent);
-}
-.card__link::after { content: ""; position: absolute; inset: 0; border-radius: 18px; } /* whole card clickable */
-.card__link span { display: inline-block; transition: transform 0.2s ease; }
-.card:hover .card__link span { transform: translateX(5px); }
-.card__link:hover { color: var(--accent); }
-.card .chip-row { margin-top: auto; padding-top: 22px; }
-
-/* other blocks pick up the same language */
-.chart-grid { gap: 28px; }
-.chart-card { background: #fff; border-top: 4px solid var(--accent); border-radius: 18px; padding: 26px 28px 20px; }
-.chart-card h3 { font-family: var(--serif); text-transform: uppercase; font-weight: 700; font-size: 24px; letter-spacing: 0.01em; margin-bottom: 6px; }
-.arch__node { background: #fff; border-top: 3px solid var(--accent); border-radius: 14px; padding: 20px; }
-.arch__node h3 { font-family: var(--serif); text-transform: uppercase; font-weight: 700; font-size: 21px; }
-.arch { border-color: var(--accent-line); border-radius: 18px; padding: 34px 24px 24px; }
-.arch__label { color: var(--accent); letter-spacing: 0.08em; }
-.member h3 { font-family: var(--serif); text-transform: uppercase; font-weight: 700; font-size: 19px; letter-spacing: 0.02em; }
-.member p { color: var(--accent); }
-.member__img { border-radius: 18px; }
-.skill-group__title { color: var(--accent); letter-spacing: 0.2em; }
-.contact__lede { text-transform: uppercase; font-weight: 700; max-width: 22ch; line-height: 1.02; font-size: clamp(30px, 4vw, 52px); }
-.form { border-radius: 18px; }
 
 /* ==========================================================================
    Staggered animations
-   JS (stagger.js) tags each child of a [data-stagger] group with .stagger-item
-   and sets --i (0, 1, 2 …). Each item then runs the same slide-up + fade, with
-   a delay of --i × 100ms. Tune the step with --stagger-step on any group.
+   stagger.js tags each child of a [data-stagger] group with .stagger-item and
+   sets --i (0, 1, 2 ...). Every item runs the same slide-up + fade, delayed by
+   --i x 100ms. Change the step with --stagger-step on any group.
    ========================================================================== */
-
 @keyframes stagger-up {
-  from { opacity: 0; transform: translateY(28px); }
+  from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-/* hidden until its group scrolls into view (only when JS is running) */
 .js [data-stagger]:not(.is-visible) .stagger-item { opacity: 0; }
-
 [data-stagger].is-visible .stagger-item {
   animation: stagger-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
   animation-delay: calc(var(--i, 0) * var(--stagger-step, 100ms));
 }
-
 @media (prefers-reduced-motion: reduce) {
   .js [data-stagger]:not(.is-visible) .stagger-item { opacity: 1; }
   [data-stagger].is-visible .stagger-item { animation: none; }
