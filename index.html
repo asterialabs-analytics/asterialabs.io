@@ -7,7 +7,7 @@
 <meta name="description" content="Asteria Labs is a Cape Town software and data company: web applications, APIs, analytics, machine learning and cloud infrastructure." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Ubuntu:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styling.css" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23445048'/%3E%3Ctext x='50' y='68' font-size='58' font-family='monospace' fill='%23f6f4ee' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 </head>
@@ -46,7 +46,7 @@
     <div class="hero__grid">
       <div data-stagger>
         <p class="hero__eyebrow">Asteria Labs — Cape Town, South Africa</p>
-        <h1 class="hero__slogan">Engineering systems. Unlocking data.</h1>
+        <h1 class="hero__slogan">Engineering systems. <span class="accent">Unlocking data.</span></h1>
         <p class="hero__role">Web Apps<span class="sep">·</span>APIs<span class="sep">·</span>Analytics<span class="sep">·</span>Machine Learning<span class="sep">·</span>Cloud</p>
         <p class="hero__desc">We build the software that runs your operations, then put your data to work. Production Django and React applications, clean APIs, analytics dashboards and classical machine learning models, deployed and maintained on infrastructure we know how to run.</p>
         <div class="hero__actions">
@@ -83,24 +83,24 @@
 </section>
 
 <section id="services">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="section-tag">§ 01</span><h2 class="section-title">What we offer</h2><span class="section-rule"></span></div>
-    <p class="lede reveal">One small team that can take a problem from a spreadsheet to a deployed system, and keep it running afterwards.</p>
+  <div class="wrap reveal">
+    <div class="section-head"><span class="section-tag">§ 01</span><h2 class="section-title">What we offer</h2><span class="section-rule"></span></div>
+    <p class="lede">One small team that can take a problem from a spreadsheet to a deployed system, and keep it running afterwards.</p>
     <div class="card-grid card-grid--3" data-stagger style="margin-top:28px">
-      <div class="card"><svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg><h3>Custom web applications</h3><p>Business platforms with authentication, workflows, admin dashboards, invoicing and PDF output, built on Django and React.</p></div>
-      <div class="card"><svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 7 3 12l5 5M16 7l5 5-5 5M14 4l-4 16"/></svg><h3>APIs and integrations</h3><p>REST APIs with Django Ninja and Flask that connect your systems to each other and to outside data sources.</p></div>
-      <div class="card"><svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><h3>Data analytics</h3><p>Pipelines, cleaning and interactive dashboards that turn operational data into numbers you can act on.</p></div>
-      <div class="card"><svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="m8 7 8 1M7 8l2 8M17 10l-6 7"/></svg><h3>Machine learning</h3><p>Forecasting, classification and regression with Random Forests, gradient boosting and SVMs, validated before they ship.</p></div>
-      <div class="card"><svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7Z"/></svg><h3>Cloud and infrastructure</h3><p>Docker-based deployments on AWS and Linux servers, Nginx, Gunicorn, mail servers with DKIM, SPF and DMARC.</p></div>
-      <div class="card"><svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Support and maintenance</h3><p>Monitoring, updates, backups and a person to call when something breaks.</p></div>
+      <div class="card"><div class="card__top"><span class="card__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span><span class="tag">Web</span></div><h3>Custom web applications</h3><p>Business platforms with authentication, workflows, admin dashboards, invoicing and PDF output, built on Django and React.</p><a class="card__link" href="#systems">See examples <span aria-hidden="true">→</span></a></div>
+      <div class="card"><div class="card__top"><span class="card__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 7 3 12l5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span><span class="tag">API</span></div><h3>APIs and integrations</h3><p>REST APIs with Django Ninja and Flask that connect your systems to each other and to outside data sources.</p><a class="card__link" href="#engineering">How we build <span aria-hidden="true">→</span></a></div>
+      <div class="card"><div class="card__top"><span class="card__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="tag">Analytics</span></div><h3>Data analytics</h3><p>Pipelines, cleaning and interactive dashboards that turn operational data into numbers you can act on.</p><a class="card__link" href="#analytics">See charts <span aria-hidden="true">→</span></a></div>
+      <div class="card"><div class="card__top"><span class="card__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="m8 7 8 1M7 8l2 8M17 10l-6 7"/></svg></span><span class="tag">ML</span></div><h3>Machine learning</h3><p>Forecasting, classification and regression with Random Forests, gradient boosting and SVMs, validated before they ship.</p><a class="card__link" href="#analytics">See models <span aria-hidden="true">→</span></a></div>
+      <div class="card"><div class="card__top"><span class="card__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7Z"/></svg></span><span class="tag">Cloud</span></div><h3>Cloud and infrastructure</h3><p>Docker-based deployments on AWS and Linux servers, Nginx, Gunicorn, mail servers with DKIM, SPF and DMARC.</p><a class="card__link" href="#engineering">How we deploy <span aria-hidden="true">→</span></a></div>
+      <div class="card"><div class="card__top"><span class="card__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="tag">Support</span></div><h3>Support and maintenance</h3><p>Monitoring, updates, backups and a person to call when something breaks.</p><a class="card__link" href="#contact">Get in touch <span aria-hidden="true">→</span></a></div>
     </div>
   </div>
 </section>
 
 <section id="analytics">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="section-tag">§ 02</span><h2 class="section-title">Data analytics</h2><span class="section-rule"></span></div>
-    <p class="lede reveal">Forecasts, drivers, relationships and model quality: the four views we reach for most often. Everything below is drawn live in your browser.</p>
+  <div class="wrap reveal">
+    <div class="section-head"><span class="section-tag">§ 02</span><h2 class="section-title">Data analytics</h2><span class="section-rule"></span></div>
+    <p class="lede">Forecasts, drivers, relationships and model quality: the four views we reach for most often. Everything below is drawn live in your browser.</p>
     <div class="chart-grid" data-stagger>
       <figure class="chart-card"><h3>Demand forecast</h3><svg id="c-forecast" role="img" aria-label="Line chart of weekly demand with a forecast and interval"></svg><figcaption>Solid: actual. Dashed: forecast with 80% interval.</figcaption></figure>
       <figure class="chart-card"><h3>What drives churn</h3><svg id="c-features" role="img" aria-label="Bar chart of feature importance"></svg><figcaption>Gradient boosting feature importance.</figcaption></figure>
@@ -112,9 +112,9 @@
 </section>
 
 <section id="engineering">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="section-tag">§ 03</span><h2 class="section-title">Software engineering</h2><span class="section-rule"></span></div>
-    <p class="lede reveal">Boring, reliable architecture, containerised so it runs the same on a laptop, a VPS or AWS.</p>
+  <div class="wrap reveal">
+    <div class="section-head"><span class="section-tag">§ 03</span><h2 class="section-title">Software engineering</h2><span class="section-rule"></span></div>
+    <p class="lede">Boring, reliable architecture, containerised so it runs the same on a laptop, a VPS or AWS.</p>
     <div class="arch" data-stagger style="margin-top:32px">
       <span class="arch__label">Docker Compose on Linux, VPS or AWS</span>
       <div class="arch__node"><h3>Frontend</h3><p>React, htmx, Bootstrap</p></div><span class="arch__arrow">→</span>
@@ -136,19 +136,19 @@
 </section>
 
 <section id="systems">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="section-tag">§ 04</span><h2 class="section-title">Systems we've built</h2><span class="section-rule"></span></div>
+  <div class="wrap reveal">
+    <div class="section-head"><span class="section-tag">§ 04</span><h2 class="section-title">Systems we've built</h2><span class="section-rule"></span></div>
     <div class="card-grid card-grid--3" data-stagger>
-      <div class="card"><div class="card__head"><h3>Loan Management Platform</h3><span class="status status--live">Production</span></div><p>Registration, authentication, loan application workflows and administrative dashboards for a lending business.</p><div class="chip-row"><span class="chip">Django</span><span class="chip">PostgreSQL</span><span class="chip">Docker Compose</span><span class="chip">Bootstrap</span></div></div>
-      <div class="card"><div class="card__head"><h3>Legal Practice Management</h3><span class="status status--live">Live</span></div><p>Case management, invoicing, PDF generation, reporting and document management for a legal practice.</p><div class="chip-row"><span class="chip">Django</span><span class="chip">PostgreSQL</span><span class="chip">Docker Compose</span><span class="chip">Bootstrap</span></div></div>
-      <div class="card"><div class="card__head"><h3>Commercial Client Website</h3><span class="status status--live">Live</span></div><p>A responsive React application, taken through production deployment, domain configuration and hosting.</p><div class="chip-row"><span class="chip">React.js</span><span class="chip">Nginx</span><span class="chip">VPS</span></div></div>
+      <div class="card"><div class="card__top"><span class="card__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 11h18M8 6V4h8v2"/></svg></span><span class="tag">Production</span></div><h3>Loan Management Platform</h3><p>Registration, authentication, loan application workflows and administrative dashboards for a lending business.</p><div class="chip-row"><span class="chip">Django</span><span class="chip">PostgreSQL</span><span class="chip">Docker Compose</span><span class="chip">Bootstrap</span></div></div>
+      <div class="card"><div class="card__top"><span class="card__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 7l7-4 7 4M5 7l-2 7a3 3 0 0 0 4 0L5 7Zm14 0-2 7a3 3 0 0 0 4 0l-2-7Z"/></svg></span><span class="tag">Live</span></div><h3>Legal Practice Management</h3><p>Case management, invoicing, PDF generation, reporting and document management for a legal practice.</p><div class="chip-row"><span class="chip">Django</span><span class="chip">PostgreSQL</span><span class="chip">Docker Compose</span><span class="chip">Bootstrap</span></div></div>
+      <div class="card"><div class="card__top"><span class="card__tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><span class="tag">Live</span></div><h3>Commercial Client Website</h3><p>A responsive React application, taken through production deployment, domain configuration and hosting.</p><div class="chip-row"><span class="chip">React.js</span><span class="chip">Nginx</span><span class="chip">VPS</span></div></div>
     </div>
   </div>
 </section>
 
 <section id="team">
-  <div class="wrap">
-    <div class="section-head reveal"><span class="section-tag">§ 05</span><h2 class="section-title">Meet the team</h2><span class="section-rule"></span></div>
+  <div class="wrap reveal">
+    <div class="section-head"><span class="section-tag">§ 05</span><h2 class="section-title">Meet the team</h2><span class="section-rule"></span></div>
     <div class="pyramid" data-stagger data-stagger-items=".member">
       <div class="pyramid__row">
         <div class="member member--lead"><div class="member__img"><img src="images/xola.jpg" alt="Portrait of Xola Ndaliso" /></div><h3>Walking Calculator</h3><p>Technical Founder</p></div>
