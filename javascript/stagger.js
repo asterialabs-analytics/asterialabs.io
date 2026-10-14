@@ -27,7 +27,7 @@
           }
         });
       },
-      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
+      { threshold: 0, rootMargin: "0px 0px -12% 0px" }
     );
     groups.forEach(function (g) { io.observe(g); });
   } else {
